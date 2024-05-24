@@ -4,6 +4,51 @@ body {
     background-position: 50%;
     background-attachment: fixed;
     overflow-y: hidden; 
+
+}
+
+.card {
+    top: 66%;
+    left: 12%;
+    position: absolute;
+    padding: 10px;
+    width: 220px;
+    background-color: rgb(229, 244, 206, 0.7);
+    border-radius: 10%;
+    box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+    animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn  {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-city {
+    margin: 10px 0px;
+}
+
+.card-weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-value {
+    display: inline-block;
+}
+
+.card-img {
+    height: 80px;
+    width: 80px;
+}
+
+h3 {
+    margin: 5px;
 }
 
 .container {
@@ -13,6 +58,9 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+/* Input поле */
+
 
 /* Styles for container countries */
 .cities {

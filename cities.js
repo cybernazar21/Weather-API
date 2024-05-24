@@ -7,11 +7,31 @@ const brasilia = document.getElementById('brasilia');
 const warsaw = document.getElementById('warsaw');
 const london = document.getElementById('london');
 
+
 // Додавання міст динамічно через JS
 const washington = createCityElement('Washington', 'washington', cities);
 const mexico = createCityElement('Mexico City', 'mexico-city', cities);
 const nuuk = createCityElement('Nuuk', 'nuuk', cities);
+const madrid = createCityElement('Madrid', 'madrid', cities);
+const berlin = createCityElement('Berlin', 'berlin', cities);
+const tokyo = createCityElement('Tokyo', 'tokyo', cities);
 
+// Масив всіх міст
+export const allCities = [
+    toronto,
+    rome,
+    kyiv,
+    canberra,
+    brasilia,
+    warsaw,
+    london,
+    washington,
+    mexico,
+    nuuk,
+    madrid,
+    berlin,
+    tokyo,
+];
 
 // Функція по створенню міст і додаванню їх в батьківський елемент.
 function createCityElement(cityName, cityId, parentElement) {
@@ -35,16 +55,3 @@ function createCityElement(cityName, cityId, parentElement) {
 
     return newDiv;
 };
-
-export const allCities = [
-    toronto,
-    rome,
-    kyiv,
-    canberra,
-    brasilia,
-    warsaw,
-    london,
-    washington,
-    mexico,
-    nuuk,
-];
