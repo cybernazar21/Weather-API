@@ -15,6 +15,7 @@ const nuuk = createCityElement('Nuuk', 'nuuk', cities);
 const madrid = createCityElement('Madrid', 'madrid', cities);
 const berlin = createCityElement('Berlin', 'berlin', cities);
 const tokyo = createCityElement('Tokyo', 'tokyo', cities);
+const dublin = createCityElement('Dublin', 'dublin', cities);
 
 // Масив всіх міст
 export const allCities = [
@@ -31,6 +32,7 @@ export const allCities = [
     madrid,
     berlin,
     tokyo,
+    dublin,
 ];
 
 // Функція по створенню міст і додаванню їх в батьківський елемент.
@@ -55,3 +57,24 @@ function createCityElement(cityName, cityId, parentElement) {
 
     return newDiv;
 };
+
+// Створення input поле
+
+function createInputArea() {
+    return ` 
+    <h2 class="title">Weather forecast</h2>
+        <form action="form" id="form">
+            <input type="text" id="inputCity" class="input" placeholder="Enter the name of the city">
+            <button class="btn_input">Show weather</button>
+        </form>`
+};
+
+function displayInputArea(element) {
+    const container = document.querySelector('.container');
+    const parentDiv = document.createElement('div');
+    parentDiv.classList.add('input_container')
+    parentDiv.innerHTML = element;
+    container.appendChild(parentDiv);
+};
+
+displayInputArea(createInputArea());

@@ -8,10 +8,6 @@ const apiKey = 'e410e2efa02a4fc69fb174528242105';
 
 // http://api.weatherapi.com/v1/current.json?key=e410e2efa02a4fc69fb174528242105&q=London
 
-// Масив для збереження усіх міст. Його більше не використовую, бо замінив його на citiesMap
-// const allCities = [toronto, rome, kyiv, canberra, brasilia, warsaw, london];
-
-
 
 
 
@@ -23,13 +19,7 @@ allCities.forEach(city => {
     });
 });
 
-// Object.keys(citiesMap).forEach(cityId => {
-//     const cityElement = document.getElementById(cityId);
-//     cityElement.addEventListener('click', function() {
-//         handleCitySelection(cityId);
-//     });
-// });
-
+// Створюємо картку погоди
 function createCard(data) {
     return `
     <div class="card">
@@ -49,6 +39,7 @@ function createCard(data) {
 </div>`;
 };
 
+// Відображаємо картку погоди
 function displayCard(html) {
     // Створюємо новий елемент div для Card.
     const divCard = document.createElement('div');
@@ -56,6 +47,7 @@ function displayCard(html) {
     body.appendChild(divCard);
 };
 
+// Видаляємо попередню картку, щоб відобразити нову.
 function removeCard() {
     const existingCard = document.querySelector('.card');
     if (existingCard) {
@@ -63,6 +55,7 @@ function removeCard() {
     }
 }
 
+// Посилаємо запит в API та отримуємо відповідь, яку відображаємо в консолі та у картці
 function handleCitySelection(selectedCity) {
     removeCard();
     const query = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedCity}`;
@@ -89,3 +82,22 @@ function handleCitySelection(selectedCity) {
         console.log(error.message)});
 };
 
+function initializeFormListener() {
+    
+    // Робимо запит через input поле
+    const form = document.querySelector('#form');
+    const input = document.querySelector('#inputCity');
+
+    // Слухаємо відправку форми
+    form.onsubmit = function(e) {
+        e.preventDefault();
+
+        // Беремо значення з інпута, обрізаючи пробіли
+        let city = input.value.trim();
+        console.log(city);
+
+        // Тут можна викликати функцію для обробки введеного значення
+        handleCitySelection(city);
+    };
+};
+initializeFormListener();

@@ -61,8 +61,31 @@ h3 {
 
 /* Input поле */
 
+.input_container {
+    position: absolute;
+    top: 0.1%;
+    left: 79%;
+}
 
-/* Styles for container countries */
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 700;
+    font-size: 22px;
+    text-align: left;
+    color: blanchedalmond;
+}
+
+.btn_input {
+    background-color: palegoldenrod;
+    transition: 1s;
+}
+
+.btn_input:hover {
+    background-color: rgb(219, 208, 85);
+}
+
+
+/* Styles for container cities */
 .cities {
     display: flex;
     position: relative;
