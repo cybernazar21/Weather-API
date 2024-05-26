@@ -75,6 +75,20 @@ h3 {
     color: blanchedalmond;
 }
 
+.input {
+    background-color: rgba(255, 255, 255, 0.5); /* Прозорий білий фон */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.input:focus {
+    background-color: rgba(255, 255, 255, 0.7); /* Менша прозорість при фокусі */
+    border-color: #666; /* Зміна кольору рамки при фокусі */
+}
+
 .btn_input {
     background-color: palegoldenrod;
     transition: 1s;

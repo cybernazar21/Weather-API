@@ -64,6 +64,7 @@ function handleCitySelection(selectedCity) {
     fetch(query)
     .then(res => {
         if (!res.ok) {
+            alert('Incorrectly city name');
             throw new Error('Network response was not ok');
         }
         return res.json();
@@ -83,7 +84,7 @@ function handleCitySelection(selectedCity) {
 };
 
 function initializeFormListener() {
-    
+
     // Робимо запит через input поле
     const form = document.querySelector('#form');
     const input = document.querySelector('#inputCity');
@@ -95,7 +96,6 @@ function initializeFormListener() {
         // Беремо значення з інпута, обрізаючи пробіли
         let city = input.value.trim();
         console.log(city);
-
         // Тут можна викликати функцію для обробки введеного значення
         handleCitySelection(city);
     };

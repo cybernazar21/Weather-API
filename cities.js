@@ -16,6 +16,9 @@ const madrid = createCityElement('Madrid', 'madrid', cities);
 const berlin = createCityElement('Berlin', 'berlin', cities);
 const tokyo = createCityElement('Tokyo', 'tokyo', cities);
 const dublin = createCityElement('Dublin', 'dublin', cities);
+const cairo = createCityElement('Cairo', 'cairo', cities);
+const antananarivo = createCityElement('Antananarivo', 'antananarivo', cities);
+const montevideo = createCityElement('Montevideo', 'montevideo', cities);
 
 // Масив всіх міст
 export const allCities = [
@@ -33,6 +36,9 @@ export const allCities = [
     berlin,
     tokyo,
     dublin,
+    cairo,
+    antananarivo,
+    montevideo,
 ];
 
 // Функція по створенню міст і додаванню їх в батьківський елемент.
