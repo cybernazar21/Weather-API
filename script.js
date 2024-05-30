@@ -58,7 +58,7 @@ function removeCard() {
 // Посилаємо запит в API та отримуємо відповідь, яку відображаємо в консолі та у картці
 function handleCitySelection(selectedCity) {
     removeCard();
-    const query = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedCity}`;
+    const query = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${selectedCity}`;
 
     // Викликаємо API для отримання погоди обраного міста
     fetch(query)
